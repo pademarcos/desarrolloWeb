@@ -97,7 +97,13 @@ section {
     font-size: 1.2rem;
     font-family: 'Quattrocento', serif;
 }
-.footer {
+.footerequipo {
+    height: 35vh;
+    background: #495371;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footerproyecto {
     height: 40vh;
     background: #495371;
     display: flex;
@@ -228,6 +234,12 @@ section {
     justify-content: center;
     margin: 1rem;
 }
+.footercontacto {
+    height: 25vh;
+    background: #495371;
+    display: flex;
+    justify-content: space-evenly;
+}
 .redes {
     height: 5vh;
     margin-top: 2rem;
@@ -299,6 +311,12 @@ section {
         grid-area: txt;
         font-size: 1rem;
     }
+    .footerequipo{
+        height: 40vh; 
+    }
+    .footerproyecto{
+        height: 50vh;
+    }
     /*especialidades*/
     .gridareaesp {
         height: 100%;
@@ -354,6 +372,9 @@ section {
         display: flex;
         justify-content: center;
     }
+    .footercontacto{
+        height: 29vh;
+    }
 }
 /*responsive responsive para tablet*/
 @media only screen and (min-width: 761px) and (max-width: 991px) {
@@ -397,6 +418,12 @@ section {
     }
     .nuestroequipodesk {
         display: none;
+    }
+    .footerequipo{
+        height: 41vh;
+    }
+    .footerproyecto{
+        height: 49vh;
     }
     /*especialidades*/
     .tituloesp {
