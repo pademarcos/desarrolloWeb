@@ -6,7 +6,11 @@
     box-sizing: border-box;
 }
 nav {
-    background: #EEEEEE;
+    background: rgb(6,5,41);
+    background: -moz-linear-gradient(117deg, rgba(6,5,41,1) 10%, rgba(111,95,172,1) 49%, rgba(0,212,255,1) 80%);
+    background: -webkit-linear-gradient(117deg, rgba(6,5,41,1) 10%, rgba(111,95,172,1) 49%, rgba(0,212,255,1) 80%);
+    background: linear-gradient(117deg, rgba(6,5,41,1) 10%, rgba(111,95,172,1) 49%, rgba(0,212,255,1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060529",endColorstr="#00d4ff",GradientType=1);
     height: 80px;
     width: 100%;
 }
@@ -115,7 +119,7 @@ section {
 }
 /*Especialidades*/
 .gridareaesp {
-    height: 91vh;
+    height: 103vh;
     width: 100%;
     background: #548CA8;
     display: grid;
