@@ -146,24 +146,12 @@ section {
     height: 80vh;
     width: 100%;
     background: #548CA8;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
-    grid-template-areas:
-        "head1 head2 head2"
-        "esp1 esp2 esp3"
-        "esp4 esp5 esp6";
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
+    
 }
 .tituloesp {
-    margin: 30px;
     grid-area: head2;
     color: black;
     font-family: 'Quattrocento', serif;
-    font-size: 4rem;
-    height: auto;
-    width: 80%;
 }
 .imgesp {
     display: flex;
@@ -334,36 +322,13 @@ section {
     /*especialidades*/
     
     } 
-    .gridareaesp {
-        
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-        grid-template-areas:
-            "head1"
-            "head2"
-            "esp1"
-            "esp2"
-            "esp3"
-            "esp4"
-            "esp5"
-            "esp6";
-            
-            height: 141vh;
-    }
+    
     
     .tituloesp {
         text-align: center;
         font-size: 2rem;
     }
-    .esp1,
-    .esp2,
-    .esp3,
-    .esp4,
-    .esp5,
-    .esp6 {
-        font-size: 1rem;
-    }
+ 
     .imgesp {
         display: flex;
         justify-content: center;
