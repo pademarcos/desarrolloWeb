@@ -5,14 +5,41 @@
     list-style: none;
     box-sizing: border-box;
 }
-nav {
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+                        "cabecera"
+                        "cuerpo"
+                        "piedepagina";
+}
+header{
+    grid-area: cabecera;
+    height: 10vh;
     background: rgb(6,5,41);
     background: -moz-linear-gradient(117deg, rgba(6,5,41,1) 10%, rgba(111,95,172,1) 49%, rgba(0,212,255,1) 80%);
     background: -webkit-linear-gradient(117deg, rgba(6,5,41,1) 10%, rgba(111,95,172,1) 49%, rgba(0,212,255,1) 80%);
     background: linear-gradient(117deg, rgba(6,5,41,1) 10%, rgba(111,95,172,1) 49%, rgba(0,212,255,1) 80%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060529",endColorstr="#00d4ff",GradientType=1);
-    height: 80px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060529",endColorstr="#00d4ff",GradientType=1); 
+}
+main{
+    grid-area: cuerpo;
+    height: 80vh;
     width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    
+}
+footer{
+    grid-area: piedepagina;
+    height: 10vh;
+    background: #827397;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
 .enlace {
     position: absolute;
@@ -57,7 +84,7 @@ li a:hover {
 section {
     text-align: center;
     font-family: 'Quattrocento', serif;
-    height: calc(100vh - 80px);
+    
     font-size: 2rem;
     display: flex;
     flex-direction: column;
@@ -78,8 +105,8 @@ section {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.6fr;
     grid-template-areas:
-        "img"
-        "txt";
+    "img"
+    "txt";
     background: #548CA8;
 }
 .imgproyecto,
@@ -101,25 +128,22 @@ section {
     font-size: 1.2rem;
     font-family: 'Quattrocento', serif;
 }
-.footerequipo {
-    height: 35vh;
+.footer{
     background: #495371;
     display: flex;
+    
     justify-content: space-evenly;
+
 }
-.footerproyecto {
-    height: 40vh;
-    background: #495371;
-    display: flex;
-    justify-content: space-evenly;
+.redes {
+    height: 5vh;
+    margin-top: 1rem;
 }
-.video {
-    display: flex;
-    align-items: center;
-}
+
+
 /*Especialidades*/
 .gridareaesp {
-    height: 103vh;
+    height: 80vh;
     width: 100%;
     background: #548CA8;
     display: grid;
@@ -130,7 +154,7 @@ section {
         "esp1 esp2 esp3"
         "esp4 esp5 esp6";
     grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-row-gap: 10px;
 }
 .tituloesp {
     margin: 30px;
@@ -238,16 +262,7 @@ section {
     justify-content: center;
     margin: 1rem;
 }
-.footercontacto {
-    height: 25vh;
-    background: #495371;
-    display: flex;
-    justify-content: space-evenly;
-}
-.redes {
-    height: 5vh;
-    margin-top: 2rem;
-}
+
 /*responsiveresponsiveresponsive       para movil*/
 @media only screen and (min-width: 300px) and (max-width: 760px) {
     .checkbtn {
@@ -315,15 +330,13 @@ section {
         grid-area: txt;
         font-size: 1rem;
     }
-    .footerequipo{
-        height: 40vh; 
-    }
-    .footerproyecto{
-        height: 50vh;
-    }
+    
     /*especialidades*/
+    
+    } 
     .gridareaesp {
-        height: 100%;
+        
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 0.2fr 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
         grid-template-areas:
@@ -335,7 +348,10 @@ section {
             "esp4"
             "esp5"
             "esp6";
+            
+            height: 141vh;
     }
+    
     .tituloesp {
         text-align: center;
         font-size: 2rem;
@@ -352,6 +368,8 @@ section {
         display: flex;
         justify-content: center;
     }
+    
+
     /*contacto*/
     .maincont {
         height: auto;
@@ -376,10 +394,8 @@ section {
         display: flex;
         justify-content: center;
     }
-    .footercontacto{
-        height: 29vh;
-    }
-}
+    
+
 /*responsive responsive para tablet*/
 @media only screen and (min-width: 761px) and (max-width: 991px) {
     .enlace {
@@ -423,9 +439,7 @@ section {
     .nuestroequipodesk {
         display: none;
     }
-    .footerequipo{
-        height: 41vh;
-    }
+    
     .footerproyecto{
         height: 49vh;
     }
