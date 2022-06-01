@@ -18,3 +18,21 @@
     justify-content: center;
 
 }
+.carousel{
+    height: 73vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+body{
+    background-color: rgb(197, 221, 243);
+}
+.headequipo{
+    padding: 20px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+
+}
