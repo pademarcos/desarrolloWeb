@@ -1,7 +1,20 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 .footer{
+    display: flex;
+    flex-direction: column;
+    
     padding: 3vh 3vh 0 3vh;
     background-color: #8f9cc2;
-    
+   
+
+
 }
 
 .redes {
@@ -29,10 +42,29 @@
 body{
     background-color: rgb(197, 221, 243);
 }
+.headproyecto{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
 .headequipo{
     padding: 20px;
     font-size: 2rem;
     display: flex;
     justify-content: space-evenly;
 
+}
+.txtcont{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.imgcont{
+    width: 100%;
+    padding: 20px;
+}
+.chicarulos{
+    width: 100%;
+    padding: 20px;
 }
