@@ -1,0 +1,25 @@
+{
+  "name": "ceo",
+  "version": "1.0.0",
+  "description": "CEO Sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss sass/main.scss styles/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pademarcos/coder.git"
+  },
+  "author": "Pablo de Marcos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pademarcos/coder/issues"
+  },
+  "homepage": "https://github.com/pademarcos/coder#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
