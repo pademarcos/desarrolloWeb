@@ -1,54 +1,5 @@
-.footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 3vh 3vh 0 3vh;
-  background-color: #8f9cc2;
-}
-
-.redes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  height: 5vh;
-}
-
-.pie {
-  margin: 1vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 body {
+  height: 100vh;
   background-color: #c5ddf3;
 }
 
@@ -65,6 +16,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.textoindex {
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .headproyecto {
@@ -106,12 +62,25 @@ body {
 }
 
 .txtequipo {
-  font-family: 'Allura', cursive;
+  font-family: 'Gentium Basic', serif;
   padding: 20px;
   font-size: 1.5rem;
 }
 
+.operadora {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .txtcont {
+  padding: 20px;
   font-family: 'Gentium Basic', serif;
   font-size: 2rem;
   display: -webkit-box;
@@ -122,14 +91,9 @@ body {
           justify-content: center;
 }
 
-.imgcont {
-  width: 100%;
-  padding: 20px;
-}
-
-.chicarulos {
-  width: 100%;
-  padding: 20px;
+.turnos {
+  font-size: 1rem;
+  font-family: 'Gentium Basic', serif;
 }
 
 .headesp {
@@ -145,5 +109,46 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 2rem;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 3vh 3vh 0 3vh;
+  background-color: #8f9cc2;
+}
+
+.redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 5vh;
+}
+
+.pie {
+  margin: 1vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=main.css.map */

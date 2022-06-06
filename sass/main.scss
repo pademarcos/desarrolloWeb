@@ -6,16 +6,96 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px
 );
+body{
+    height: 100vh;
+    background-color: rgb(197, 221, 243);
+}
+.tituloindex{
+    font-family: 'Gentium Basic', serif;
+    padding: 20px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textoindex{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+.headproyecto{
+    font-family: 'Gentium Basic', serif;
+    padding: 20px;
+    font-size: 2rem;
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+.consultorio{
+    height: 20h;
+    width: 100%;
+    padding: 20px;
+    
+}
+
+.headequipo{
+    font-family: 'Gentium Basic', serif;
+    padding: 30px;
+    font-size: 2rem;
+    display: flex;
+    
+    justify-content: space-evenly;
+    align-items: center;
+}
+.imgequipo{
+    height: 20vh;
+    width: auto;
+}
+.txtequipo{
+    font-family: 'Gentium Basic', serif;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.operadora{
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+}
+.txtcont{
+    padding: 20px;
+    font-family: 'Gentium Basic', serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.turnos{
+    font-size: 1rem;
+    font-family: 'Gentium Basic', serif;
+}
+
+.headesp{
+    font-family: 'Gentium Basic', serif;
+    display: flex;
+    padding: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+}
+
 .footer{
     display: flex;
     flex-direction: column;
-    
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     padding: 3vh 3vh 0 3vh;
     background-color: #8f9cc2;
-   
-
-
 }
+
 
 .redes {
     display: flex;
@@ -30,77 +110,4 @@ $grid-breakpoints: (
     align-items: flex-end;
     justify-content: center;
 
-}
-.carousel{
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-}
-
-body{
-    background-color: rgb(197, 221, 243);
-}
-.tituloindex{
-    font-family: 'Gentium Basic', serif;
-    padding: 20px;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.headproyecto{
-    font-family: 'Gentium Basic', serif;
-    padding: 20px;
-    font-size: 2rem;
-
-    display: flex;
-    justify-content: space-evenly;
-}
-.consultorio{
-    height: 20h;
-    width: 100%;
-    padding: 20px;
-   
-}
-
-.headequipo{
-    font-family: 'Gentium Basic', serif;
-    padding: 30px;
-    font-size: 2rem;
-    display: flex;
-
-    justify-content: space-evenly;
-    align-items: center;
-}
-.imgequipo{
-    height: 20vh;
-    width: auto;
-}
-.txtequipo{
-    font-family: 'Allura', cursive;
-    padding: 20px;
-    font-size: 1.5rem;
-}
-.txtcont{
-    font-family: 'Gentium Basic', serif;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    
-}
-.imgcont{
-    width: 100%;
-    padding: 20px;
-}
-.chicarulos{
-    width: 100%;
-    padding: 20px;
-}
-.headesp{
-    font-family: 'Gentium Basic', serif;
-    display: flex;
-    padding: 20px;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 2rem;
 }

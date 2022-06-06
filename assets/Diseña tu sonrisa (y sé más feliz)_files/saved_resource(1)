@@ -1,6 +1,0 @@
-(function(__VR_info) {
-            /* global __VR_info */
-console.log(__VR_info);
-
-        })("Invalid zid.");
-        
