@@ -1,0 +1,142 @@
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+body {
+    background-color: rgb(197, 221, 243);
+}
+.tituloindex {
+    font-family: $fuente;
+    padding: 20px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoindex {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.headproyecto {
+    font-family: $fuente;
+    padding: 20px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.txtproyecto{
+    padding: 20px;
+    font-family: $fuente;
+}
+
+.consultorio {
+    height: 20h;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.equipo {
+    font-family: $fuente;
+    padding: 30px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__img {
+        height: 20vh;
+        width: auto;
+    }
+
+    &__txt {
+        font-family: $fuente;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.contacto {
+    &__op {
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__txt {
+        padding: 20px;
+        font-family: $fuente;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__datos {
+        font-size: 1rem;
+        font-family: $fuente
+    }
+}
+
+
+
+
+.headesp {
+    font-family: $fuente;
+    padding: 30px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    &__img {
+        height: 20vh;
+        width: auto;
+    }
+}
+.accordion{
+    font-size: 1.5rem;
+    font-family: $fuente;
+    &-button{
+        font-size: 1.5rem;
+        font-family: $fuente;
+    }
+}
+.footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        bottom: 0;
+        padding: 10px;
+        background-color: #8f9cc2;
+
+        &__iconos{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+
+        &__redes {
+            height: 5vh;
+        }
+
+        &__pie {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+        }
+    }

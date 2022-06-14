@@ -1,10 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  height: 100vh;
   background-color: #c5ddf3;
 }
 
 .tituloindex {
-  font-family: 'Gentium Basic', serif;
+  font-family: "Gentium Basic", serif;
   padding: 20px;
   font-size: 3rem;
   display: -webkit-box;
@@ -20,13 +24,13 @@ body {
 
 .textoindex {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #fff;
 }
 
 .headproyecto {
-  font-family: 'Gentium Basic', serif;
+  font-family: "Gentium Basic", serif;
   padding: 20px;
-  font-size: 2rem;
+  font-size: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,14 +39,19 @@ body {
           justify-content: space-evenly;
 }
 
+.txtproyecto {
+  padding: 20px;
+  font-family: "Gentium Basic", serif;
+}
+
 .consultorio {
   height: 20h;
   width: 100%;
   padding: 20px;
 }
 
-.headequipo {
-  font-family: 'Gentium Basic', serif;
+.equipo {
+  font-family: "Gentium Basic", serif;
   padding: 30px;
   font-size: 2rem;
   display: -webkit-box;
@@ -56,18 +65,18 @@ body {
           align-items: center;
 }
 
-.imgequipo {
+.equipo__img {
   height: 20vh;
   width: auto;
 }
 
-.txtequipo {
-  font-family: 'Gentium Basic', serif;
+.equipo__txt {
+  font-family: "Gentium Basic", serif;
   padding: 20px;
   font-size: 1.5rem;
 }
 
-.operadora {
+.contacto__op {
   height: auto;
   width: 100%;
   padding: 20px;
@@ -79,9 +88,9 @@ body {
           align-items: center;
 }
 
-.txtcont {
+.contacto__txt {
   padding: 20px;
-  font-family: 'Gentium Basic', serif;
+  font-family: "Gentium Basic", serif;
   font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,24 +100,39 @@ body {
           justify-content: center;
 }
 
-.turnos {
+.contacto__datos {
   font-size: 1rem;
-  font-family: 'Gentium Basic', serif;
+  font-family: "Gentium Basic", serif;
 }
 
 .headesp {
-  font-family: 'Gentium Basic', serif;
+  font-family: "Gentium Basic", serif;
+  padding: 30px;
+  font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2rem;
+}
+
+.headesp__img {
+  height: 20vh;
+  width: auto;
+}
+
+.accordion {
+  font-size: 1.5rem;
+  font-family: "Gentium Basic", serif;
+}
+
+.accordion-button {
+  font-size: 1.5rem;
+  font-family: "Gentium Basic", serif;
 }
 
 .footer {
@@ -119,28 +143,34 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
   width: 100%;
   bottom: 0;
-  padding: 3vh 3vh 0 3vh;
+  padding: 10px;
   background-color: #8f9cc2;
 }
 
-.redes {
+.footer__iconos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.footer__redes {
   height: 5vh;
 }
 
-.pie {
-  margin: 1vh;
+.footer__pie {
+  font-size: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,4 +181,3 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-/*# sourceMappingURL=main.css.map */
