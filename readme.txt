@@ -1,1 +1,1 @@
-en proceso
+Pagina de Centro Odontologico donde se ofrecen todo tipo de disciplinas en el area de la odontología con tecnologia de vanguardia y profesionales altamente capacitados.
