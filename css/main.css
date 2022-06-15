@@ -126,6 +126,7 @@ body {
 }
 
 .accordion {
+  padding-bottom: 30px;
   font-size: 1.5rem;
   font-family: "Gentium Basic", serif;
 }
