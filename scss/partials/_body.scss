@@ -30,17 +30,17 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
-.txtproyecto{
+
+.cards{
+    display: inline-block;
     padding: 20px;
-    font-family: $fuente;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.consultorio {
-    height: 20h;
-    width: 100%;
-    padding: 20px;
-
-}
 
 .equipo {
     font-family: $fuente;
