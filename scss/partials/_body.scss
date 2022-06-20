@@ -31,15 +31,10 @@ body {
     justify-content: space-evenly;
 }
 
-.cards{
-    display: inline-block;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+.card-title {
+    @include card-title;
 }
+
 
 
 .equipo {
