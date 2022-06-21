@@ -1,7 +1,23 @@
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
 $fuente: 'Gentium Basic', serif;
 
 @mixin card-title {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
-    color: rgb(6, 76, 141);
 }
+
+$palette: (
+    'bg-color': rgb(197, 221, 243),
+    'bg-color-index': rgb(59, 99, 145),
+    //'body': rgb(197, 221, 243),
+    'footer': #8f9cc2,
+    'index': #fff,
+    'cards': rgb(6, 76, 141),
+)

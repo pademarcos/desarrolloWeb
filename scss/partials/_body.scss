@@ -1,43 +1,49 @@
-$grid-breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
-);
 body {
-    background-color: rgb(197, 221, 243);
+    background-color: map-get($map: $palette, $key: 'body');
 }
-.tituloindex {
-    font-family: $fuente;
-    padding: 20px;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main-index{
+    background-color: map-get($map: $palette, $key: 'bg-color-index');
+    &__texto {
+        font-size: 1.5rem;
+        color: map-get($map: $palette, $key: 'index');
+    }
+    &__titulo {
+            font-family: $fuente;
+            padding: 20px;
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+.bg-color{
+    background-color: map-get($map: $palette, $key: 'bg-color');
 }
 
-.textoindex {
-    font-size: 1.5rem;
-    color: #fff;
-}
+
 
 .headproyecto {
+    background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
     padding: 20px;
-    font-size: 3rem;
+    font-size: 2rem;
     display: flex;
     justify-content: space-evenly;
 }
-
-.card-title {
-    @include card-title;
+.cards{
+    padding-bottom: 30px;
+    &__title {
+        @include card-title;
+        color: map-get($map: $palette, $key: 'cards');
+        
+    }
 }
+
 
 
 
 .equipo {
+    background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
     padding: 30px;
     font-size: 2rem;
@@ -60,6 +66,7 @@ body {
 
 
 .contacto {
+    background-color: map-get($map: $palette, $key: 'bg-color');
     &__op {
         height: auto;
         width: 100%;
@@ -83,11 +90,8 @@ body {
         font-family: $fuente
     }
 }
-
-
-
-
 .headesp {
+    background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
     padding: 30px;
     font-size: 2rem;
@@ -100,6 +104,7 @@ body {
     }
 }
 .accordion{
+    background-color: map-get($map: $palette, $key: 'bg-color');
     padding-bottom: 30px;
     font-size: 1.5rem;
     font-family: $fuente;
@@ -114,7 +119,7 @@ body {
         width: 100%;
         bottom: 0;
         padding: 10px;
-        background-color: #8f9cc2;
+        background-color: map-get($map: $palette, $key: 'footer');
 
         &__iconos{
             display: flex;
