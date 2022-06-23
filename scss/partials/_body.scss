@@ -8,12 +8,7 @@
     &__titulo {
         color: #fff;
         font-family: $fuente;
-        padding: 20px;
-        font-size: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+        @extend .textoextend;
         }
     }
 .bg-color{
@@ -25,17 +20,21 @@
 .headproyecto {
     background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
-    padding: 20px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: space-evenly;
+    @extend .textoextend;
+
 }
 .cards{
     padding-bottom: 30px;
+    &__all{
+        background-color: map-get($map: $palette, $key: 'bg-cards');
+        box-shadow: 1px 1px 12px 0px rgba(0,0,0,10);
+    }
+    &__body{
+        padding: 5px;
+    }
     &__title {
         @include card-title;
         color: map-get($map: $palette, $key: 'cards');
-        
     }
 }
 
@@ -45,11 +44,8 @@
 .equipo {
     background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
-    padding: 30px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @extend .textoextend;
+    
 
     &__img {
         height: 20vh;
@@ -66,11 +62,8 @@
 .headesp {
     background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
-    padding: 30px;
-    font-size: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @extend .textoextend;
+    
     &__img {
         height: 20vh;
         width: auto;
@@ -78,9 +71,9 @@
 }
 .accordion{
     background-color: map-get($map: $palette, $key: 'bg-color');
+    font-family: $fuente;
     padding-bottom: 30px;
     font-size: 1.5rem;
-    font-family: $fuente;
     &-button{
         font-size: 1.5rem;
         font-family: $fuente;
@@ -90,8 +83,11 @@
 
 .contacto {
     background-color: map-get($map: $palette, $key: 'bg-color');
+    &__txt {
+        font-family: $fuente;
+        @extend .textoextend;
+    }
     &__op {
-        height: auto;
         width: 100%;
         padding: 20px;
         display: flex;
@@ -99,17 +95,9 @@
 
     }
 
-    &__txt {
-        padding: 20px;
-        font-family: $fuente;
-        font-size: 2rem;
-        display: flex;
-        justify-content: center;
-
-    }
 
     &__datos {
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-family: $fuente
     }
 }

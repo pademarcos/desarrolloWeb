@@ -5,6 +5,20 @@
           box-sizing: border-box;
 }
 
+.textoextend, .main-index__titulo, .headproyecto, .equipo, .headesp, .contacto__txt {
+  padding: 30px;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .main-index {
   background-color: #3b6391;
 }
@@ -16,17 +30,6 @@
 .main-index__titulo {
   color: #fff;
   font-family: "Gentium Basic", serif;
-  padding: 20px;
-  font-size: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .bg-color {
@@ -36,18 +39,20 @@
 .headproyecto {
   background-color: #c5ddf3;
   font-family: "Gentium Basic", serif;
-  padding: 20px;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .cards {
   padding-bottom: 30px;
+}
+
+.cards__all {
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 12px 0px black;
+          box-shadow: 1px 1px 12px 0px black;
+}
+
+.cards__body {
+  padding: 5px;
 }
 
 .cards__title {
@@ -59,17 +64,6 @@
 .equipo {
   background-color: #c5ddf3;
   font-family: "Gentium Basic", serif;
-  padding: 30px;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .equipo__img {
@@ -86,17 +80,6 @@
 .headesp {
   background-color: #c5ddf3;
   font-family: "Gentium Basic", serif;
-  padding: 30px;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .headesp__img {
@@ -106,9 +89,9 @@
 
 .accordion {
   background-color: #c5ddf3;
+  font-family: "Gentium Basic", serif;
   padding-bottom: 30px;
   font-size: 1.5rem;
-  font-family: "Gentium Basic", serif;
 }
 
 .accordion-button {
@@ -120,8 +103,11 @@
   background-color: #c5ddf3;
 }
 
+.contacto__txt {
+  font-family: "Gentium Basic", serif;
+}
+
 .contacto__op {
-  height: auto;
   width: 100%;
   padding: 20px;
   display: -webkit-box;
@@ -132,20 +118,8 @@
           align-items: center;
 }
 
-.contacto__txt {
-  padding: 20px;
-  font-family: "Gentium Basic", serif;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .contacto__datos {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: "Gentium Basic", serif;
 }
 
