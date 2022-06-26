@@ -2,94 +2,137 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-    <title>CEO Contacto</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quattrocento&display=swap');
-    </style>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Centro de Especialidades Odontológicas ofrece atencion con profesionales altamente capacitados.">
+  <meta name="keywords" content="ODONTOLOGIA, PREFESIONALES, CEO, ESTETICA, EXCELENCIA, CONTACTO, CEOCATAMARCA">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>CEO - Central de Turnos</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../scss/main.css">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Allura&family=Gentium+Basic:wght@400;700&display=swap');
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <a href="#" class="enlace">
-                <img src="../assets/Logo-CEO-header.png" alt="" class="logo">
-            </a>
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                    <a href="./proyecto.html">Proyecto</a>
-                    <a href="./equipo.html">Equipo</a>
-                    <a href="./especialidades.html">Especialidades</a>
-                    <a class="active" href="#">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="maincont">
-        <img class="imgcont" src="../assets/operadora.png" alt="operadora">
-        <p class="txtcont">Contacto</p>
+  <!--Header-->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="../assets/Logo-CEO-header.png"
+            alt="Logo de Centro de Especialidades Odontológicas"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./proyecto.html">Proyecto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./equipo.html">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./especialidades.html">Especialidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+            </li>
 
-        <div class="turnos">
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--Main-->
+  <main class="bg-color">
+    <div class="container-fluid">
+      <div class="row contacto">
+        <div class="col-4">
+          <img class="contacto__op" src="../assets/operadora.png" alt="Imagen de mujer operadora sonriendo">
+        </div>
+        <div class="col-8">
+          <h1 class="contacto__txt">CONTACTO</h1>
+          <div class="contacto__datos">
             <p>
-                Dónde encontrarnos:
-                Almagro xxx
-                Catamarca, xxx 
-                MP Nº xxx 
-                Escribinos o llamanos:
-                Whatsapp: xxx 
-                Teléfono: xxx / xxx 
-                Correo electrónico: 
-                xx@xxx.com.ar </p>
-            <form action="" method="get" enctype="text/plain">
-                <fieldset>
-                    <div>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" required placeholder="Ingrese su nombre">
-                    </div>
-                    <div>
-                        <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido" required placeholder="Ingrese su apellido">
-                    </div>
-                    <div>
-                        <label for="telefono">Teléfono</label>
-                        <input type="number" name="telefono" id="telefono" required placeholder="Ingrese su telefono">
-                    </div>
-                    <div>
-                        <label for="email">e-mail</label>
-                        <input type="email" name="email" id="email" required placeholder="Ingrese su e-mail">
-                    </div>
-                    <div>
-                        <input type="submit" value="ENVIAR">
-                    </div>
-                </fieldset>
+              Somos un equipo de profesionales altamente capacitados con una formación continua en los avances de la
+              odontología moderna para brindarles trabajos estéticos odontológicos de excelencia. <br>
+              Dónde encontrarnos:
+              Almagro xxx
+              Catamarca, xxx
+              MP Nº xxx
+              Escribinos o llamanos:
+              Whatsapp: xxx
+              Teléfono: xxx / xxx
+              Correo electrónico:
+              xx@xxx.com.ar </p>
+            <form class="row gy-2 gx-3 align-items-center">
+              <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingInput">Name</label>
+                <input type="text" class="form-control" id="autoSizingInput" placeholder="Nombre Completo">
+              </div>
+              <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingInputGroup">Nombre de Usuario</label>
+                <div class="input-group">
+                  <div class="input-group-text">@</div>
+                  <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nombre de Usuario">
+                </div>
+              </div>
+              <div class="col-auto">
+                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                <select class="form-select" id="autoSizingSelect">
+                  <option selected>Doctores..</option>
+                  <option value="1">Dr. Carlos</option>
+                  <option value="2">Dra. Cecilia</option>
+                  <option value="4">Dra. Evangelina</option>
+                  <option value="5">Dr. Mateo</option>
+                  <option value="6">Dr. Jprge</option>
+                  <option value="7">Dra. Estrella</option>
+                </select>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                  <label class="form-check-label" for="autoSizingCheck">
+                    Recordar
+                  </label>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
             </form>
+          </div>
         </div>
-        <div class="slide">
-            <img class="chicarulos" src="../assets/risos2.jpg" alt="chica">
-        </div>
+      </div>
+    </div>
+  </main>
+  <!--Footer-->
+  <footer class="container-fluid footer">
+    <div class="row">
+      <div class="col-12 footer__iconos">
+        <img class="footer__redes" src="../assets/whatsapp.png" alt="whatsapp">
+        <img class="footer__redes" src="../assets/instagram.png" alt="instagram">
+        <img class="footer__redes" src="../assets/facebook.png" alt="facebook">
+      </div>
+    </div>
+    <div class="footer__pie">
+      <p>CEO - Almagro 135, Catamarca Argentina / ceocatamarca@gmail.xxx</p>
+    </div>
+  </footer>
 
-    </main>
-    <footer>
-        <img class="redes" src="../assets/whatsapp.png" alt="whatsapp">
-        <img class="redes" src="../assets/instagram.png" alt="instagram">
-        <img class="redes" src="../assets/facebook.png" alt="facebook">
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 
 </body>
 

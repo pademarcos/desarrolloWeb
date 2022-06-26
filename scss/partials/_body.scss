@@ -1,0 +1,133 @@
+//Index
+.main-index{
+    background-color: map-get($map: $palette, $key: 'bg-color-index');
+    &__texto {
+        font-size: 1.5rem;
+        
+    }
+    &__titulo {
+        color: #fff;
+        font-family: $fuente;
+        @extend .textoextend;
+        }
+    }
+.bg-color{
+    background-color: map-get($map: $palette, $key: 'bg-color');
+}
+
+//Proyecto
+
+.headproyecto {
+    background-color: map-get($map: $palette, $key: 'bg-color');
+    font-family: $fuente;
+    @extend .textoextend;
+
+}
+.cards{
+    padding-bottom: 30px;
+    &__all{
+        background-color: map-get($map: $palette, $key: 'bg-cards');
+        box-shadow: 1px 1px 12px 0px rgba(0,0,0,10);
+    }
+    &__body{
+        padding: 5px;
+    }
+    &__title {
+        @include card-title;
+        color: map-get($map: $palette, $key: 'cards');
+    }
+}
+
+
+
+//Equipo
+.equipo {
+    background-color: map-get($map: $palette, $key: 'bg-color');
+    font-family: $fuente;
+    @extend .textoextend;
+    
+
+    &__img {
+        height: 20vh;
+        width: auto;
+    }
+    
+    &__txt {
+        font-family: $fuente;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+}
+//Especialidades
+.headesp {
+    background-color: map-get($map: $palette, $key: 'bg-color');
+    font-family: $fuente;
+    @extend .textoextend;
+    
+    &__img {
+        height: 20vh;
+        width: auto;
+    }
+}
+.accordion{
+    background-color: map-get($map: $palette, $key: 'bg-color');
+    font-family: $fuente;
+    padding-bottom: 30px;
+    font-size: 1.5rem;
+    &-button{
+        font-size: 1.5rem;
+        font-family: $fuente;
+    }
+}
+//Contacto
+
+.contacto {
+    background-color: map-get($map: $palette, $key: 'bg-color');
+    &__txt {
+        font-family: $fuente;
+        @extend .textoextend;
+    }
+    &__op {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+
+    }
+
+
+    &__datos {
+        font-size: 1.5rem;
+        font-family: $fuente
+    }
+}
+//Footer de todas las páginas
+.footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        bottom: 0;
+        padding-top: 10px;
+        background-color: map-get($map: $palette, $key: 'footer');
+
+        &__iconos{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+
+        &__redes {
+            height: 5vh;
+        }
+
+        &__pie {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+
+        }
+    }

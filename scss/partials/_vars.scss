@@ -1,0 +1,33 @@
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+$fuente: 'Gentium Basic', serif;
+
+.textoextend {
+    padding: 30px;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@mixin card-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+
+}
+
+
+
+$palette: (
+    'bg-color': rgb(197, 221, 243),
+    'bg-color-index': rgb(59, 99, 145),
+    'footer': #8f9cc2,
+    'bg-cards': #fff,
+    'cards': rgb(6, 76, 141),
+)
+
