@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Centro de Especialidades Odontológicas presenta especialistas altamente calificados en todas las ramas de la Odontología.">
-  <meta name="keywords" content="ESPECIALIDADES, CEO, CATAMARCA, ODONTOLOGIA, ESTETICA, ORTODONCIA, ENDODONCIA, ODONTOPEDIATRIA, CIRUGIA, MAXILOFACIAL, IMPLANTOLOGIA, DENTAL">
+  <meta name="description"
+    content="Centro de Especialidades Odontológicas presenta especialistas altamente calificados en todas las ramas de la Odontología.">
+  <meta name="keywords"
+    content="ESPECIALIDADES, CEO, CATAMARCA, ODONTOLOGIA, ESTETICA, ORTODONCIA, ENDODONCIA, ODONTOPEDIATRIA, CIRUGIA, MAXILOFACIAL, IMPLANTOLOGIA, DENTAL">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -20,11 +22,11 @@
 </head>
 
 <body>
-  <!--Header-->
+  <!--Barra de Navegacion-->
   <header>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../assets/Logo-CEO-header.png"
+        <a class="navbar-brand" href="../index.html"><img src="../assets/Logo-CEO-header.png"
             alt="Logo de Centro de Especialidades Odontológicas"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +34,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="./proyecto.html">Proyecto</a>
             </li>
@@ -53,141 +52,134 @@
       </div>
     </nav>
   </header>
-  <!--Main-->
+  <!--Titulo de la Página-->
   <main class="bg-color">
-
-    <div class="container-fluid">
-      <div class="row headesp">
+    <section class="container-fluid">
+      <article class="row headesp">
         <img class="col-6 headesp__img" src="../assets/sonrisaesp.jpg"
           alt="Imagen de chico sonriendo con el equipo odontológico detrás">
         <h1 class="col-6">ESPECIALIDADES</h1>
-      </div>
-
+      </article>
+      <!--Acordion de Especialidades-->
       <div class="row">
-        <div>
-          <div class="accordion" id="accordionExample">
-            <!--uno-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Ortodóncia
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Ortodóncia. </strong> Es una especialidad de la odontología que se encarga de todo el estudio,
-                  prevención, diagnóstico y tratamiento de las anomalías de forma, posición, relación y función de las
-                  estructuras
-                  dentomaxilofaciales.
-                </div>
+        <div class="accordion" id="accordionExample">
+          <!--Nivel uno de acordion-->
+          <article class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Ortodóncia
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Ortodóncia. </strong> Es una especialidad de la odontología que se encarga de todo el estudio,
+                prevención, diagnóstico y tratamiento de las anomalías de forma, posición, relación y función de las
+                estructuras
+                dentomaxilofaciales.
               </div>
             </div>
-            <!--dos-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                  Odontología Estética
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Odontología estética. </strong>
-                  La odontología estética u odontología cosmética es una
-                  especialidad de la odontología que soluciona problemas relacionados con la salud bucal y la armonía
-                  estética de la boca en su totalidad.
-                </div>
+          </article>
+          <!--Nivel dos de acordion-->
+          <article class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                Odontología Estética
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Odontología estética. </strong>
+                La odontología estética u odontología cosmética es una
+                especialidad de la odontología que soluciona problemas relacionados con la salud bucal y la armonía
+                estética de la boca en su totalidad.
               </div>
             </div>
-            <!--tres-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                  Odontopediatría
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Odontopediatría. </strong>
-                  Es la rama de la odontología encargada de tratar a los niños. El
-                  odontopediatra será, por tanto, el encargado de explorar y tratar a niños y recién nacidos.
-                </div>
+          </article>
+          <!--Nivel tres de acordion-->
+          <article class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                Odontopediatría
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Odontopediatría. </strong>
+                Es la rama de la odontología encargada de tratar a los niños. El
+                odontopediatra será, por tanto, el encargado de explorar y tratar a niños y recién nacidos.
               </div>
             </div>
-            <!--cuatro-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                  Endodoncia
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Endodoncia. </strong>
-                  Consiste en la extirpación de la pulpa dental y el posterior relleno y
-                  sellado de la cavidad pulpar con un material inerte.
-                </div>
+          </article>
+          <!--Nivel cuatro de acordion-->
+          <article class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                Endodoncia
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Endodoncia. </strong>
+                Consiste en la extirpación de la pulpa dental y el posterior relleno y
+                sellado de la cavidad pulpar con un material inerte.
               </div>
             </div>
-            <!--cinco-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                  Cirugía oral y maxilofacial
-                </button>
-              </h2>
-              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Cirugía oral y Maxilofacial. </strong>
-                  Especialidad quirúrgica que incluye el diagnóstico, cirugía y tratamientos relacionados de un gran
-                  espectro de enfermedades, heridas y aspectos estéticos de la boca, dientes, cara, cabeza y cuello
-                </div>
+          </article>
+          <!--Nivel cinco de acordion-->
+          <article class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                Cirugía oral y maxilofacial
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Cirugía oral y Maxilofacial. </strong>
+                Especialidad quirúrgica que incluye el diagnóstico, cirugía y tratamientos relacionados de un gran
+                espectro de enfermedades, heridas y aspectos estéticos de la boca, dientes, cara, cabeza y cuello
               </div>
             </div>
-            <!--seis-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                  Implantología Dental
-                </button>
-              </h2>
-              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>Implantología dental. </strong>
-                  Es una disciplina odontológica que se dedica al reemplazo de
-                  dientes perdidos mediante la colocación quirúrgica de un implante dental en el maxilar o la mandíbula.
-                  A día de hoy se considera una de las técnicas más eficaces de rehabilitación dental.
-                </div>
+          </article>
+          <!--Nivel seis de acordion-->
+          <article class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                Implantología Dental
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Implantología dental. </strong>
+                Es una disciplina odontológica que se dedica al reemplazo de
+                dientes perdidos mediante la colocación quirúrgica de un implante dental en el maxilar o la mandíbula.
+                A día de hoy se considera una de las técnicas más eficaces de rehabilitación dental.
               </div>
             </div>
-
-
-          </div>
+          </article>
         </div>
 
-
       </div>
-
-
+    </section>
   </main>
-    <!--Footer-->
+  <!--Redes sociales-->
   <footer class="container-fluid footer">
     <div class="row">
       <div class="col-12 footer__iconos">
-        <img class="footer__redes" src="../assets/whatsapp.png" alt="whatsapp">
-        <img class="footer__redes" src="../assets/instagram.png" alt="instagram">
-        <img class="footer__redes" src="../assets/facebook.png" alt="facebook">
+        <a href="https://www.whatsapp.com/" target="_blank"><img class="footer__redes" src="../assets/whatsapp.png" alt="logo de whatsapp"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img class="footer__redes" src="../assets/instagram.png" alt="logo de instagram"></a>
+        <a href="https://es-la.facebook.com/" target="_blank"><img class="footer__redes" src="../assets/facebook.png" alt="logo de facebook"></a>
       </div>
     </div>
     <div class="footer__pie">

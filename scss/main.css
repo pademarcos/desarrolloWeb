@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+.menu {
+  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-index {
   background-color: rgb(59, 99, 145);
 }
