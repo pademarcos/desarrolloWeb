@@ -52,9 +52,15 @@
     font-family: $fuente;
     @extend .textoextend;
     
+    &__titulo{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+
+    }
 
     &__img {
-        height: 20vh;
+        height: 40vh;
         width: auto;
     }
     
@@ -98,42 +104,47 @@
         padding: 20px;
         display: flex;
         align-items: center;
-
     }
-
-
     &__datos {
         font-size: 1.5rem;
         font-family: $fuente
+       
     }
+}
+.mapa{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
 //Footer de todas las páginas
 .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+    padding-top: 10px;
+    background-color: map-get($map: $palette, $key: 'footer');
+
+
+    &__iconos {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        bottom: 0;
-        padding-top: 10px;
-        background-color: map-get($map: $palette, $key: 'footer');
-
-        &__iconos{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
-            
-        }
-
-        &__redes {
-            height: 5vh;
-        }
-
-        &__pie {
-            font-size: 1.5rem;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-
-
-        }
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
     }
+
+    &__redes {
+        height: 5vh;
+    }
+
+    &__pie {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+
+    }
+}

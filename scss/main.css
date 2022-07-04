@@ -57,8 +57,13 @@
   background-color: rgb(197, 221, 243);
   font-family: "Gentium Basic", serif;
 }
+.equipo__titulo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
 .equipo__img {
-  height: 20vh;
+  height: 40vh;
   width: auto;
 }
 .equipo__txt {
@@ -102,6 +107,13 @@
 .contacto__datos {
   font-size: 1.5rem;
   font-family: "Gentium Basic", serif;
+}
+
+.mapa {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {
