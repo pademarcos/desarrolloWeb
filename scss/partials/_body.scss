@@ -1,10 +1,17 @@
 
+
 //Index
 .main-index{
-    background-color: map-get($map: $palette, $key: 'bg-color-index');
+    background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+   
     &__texto {
         font-size: 1.5rem;
         
+    }
+    &__txt{
+        font-family: $fuente;
+        text-align: center;
+        font-weight: bold;
     }
     &__titulo {
         color: #fff;
@@ -21,8 +28,6 @@
 .headproyecto {
     background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
-    @extend .textoextend;
-
 }
 .cards{
     padding-bottom: 30px;
@@ -50,13 +55,10 @@
 .equipo {
     background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
-    @extend .textoextend;
+   
     
     &__titulo{
-        display: flex;
-        justify-content: center;
         padding-bottom: 20px;
-
     }
 
     &__img {
@@ -67,27 +69,34 @@
     &__txt {
         font-family: $fuente;
         padding: 20px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
+    &__img{
+       
+        height: auto;
+       width: 100%;
+    }
+    
 }
 //Especialidades
 .headesp {
+    
     background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
-    @extend .textoextend;
+   @extend .textoextend;
     
     &__img {
-        height: 20vh;
-        width: auto;
+        height: auto;
+        width: 30%;
     }
 }
 .accordion{
     background-color: map-get($map: $palette, $key: 'bg-color');
     font-family: $fuente;
-    padding-bottom: 30px;
-    font-size: 1.5rem;
+    padding-bottom: 10px;
+    font-size: 1rem;
     &-button{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-family: $fuente;
     }
 }
@@ -97,54 +106,37 @@
     background-color: map-get($map: $palette, $key: 'bg-color');
     &__txt {
         font-family: $fuente;
-        @extend .textoextend;
+        
     }
     &__op {
         width: 100%;
         padding: 20px;
-        display: flex;
-        align-items: center;
     }
     &__datos {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-family: $fuente
        
     }
 }
 .mapa{
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
    
 }
 //Footer de todas las páginas
 .footer {
+    
     display: flex;
     flex-direction: column;
     width: 100%;
     bottom: 0;
     padding-top: 10px;
     background-color: map-get($map: $palette, $key: 'footer');
-
-
-    &__iconos {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
     &__redes {
         height: 5vh;
     }
 
     &__pie {
-        font-size: 1.5rem;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-
-
+        font-size: 1.2rem;
     }
 }
