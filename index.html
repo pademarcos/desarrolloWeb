@@ -16,16 +16,15 @@
     <link rel="stylesheet" href="./scss/main.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Allura&family=Gentium+Basic:wght@400;700&display=swap');
-    </style>
-
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;500;600&display=swap');
+        </style>
 </head>
 
 <body>
-    <!--Header-->
+    <!--Barra de Navegacion-->
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-md bg-light">
+            <section class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="./assets/Logo-CEO-header.png"
                         alt="Logo de Centro de Especialidades Odontológicas"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -35,9 +34,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="./enlaces/proyecto.html">Proyecto</a>
                         </li>
@@ -54,21 +50,25 @@
 
                     </ul>
                 </div>
-            </div>
+
+            </section>
         </nav>
 
     </header>
-    <!--Main-->
+    <!--Titulo-->
     <main class="main-index">
-        <div class="container-fluid">
+        <section class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="animate__animated animate__zoomIn main-index__titulo">CEO Consultorios de Especialidades
-                        Odontológicas</h1>
+                    <h1 class="animate__animated animate__zoomIn main-index__titulo">CEO</h1>
+                        <h2 class="main-index__txt d-flex justify-content-center"> CONSULTORIOS DE ESPECIALIDADES ODONTOLOGICAS <br>
+                    Equipo de primer nivel de expertos, médicos, técnicos de laboratorio y personal de apoyo que
+                        trabajan en un edificio moderno que incluye 6 consultorios dentales, un laboratorio dental y un
+                        centro de diagnóstico</h2>
                 </div>
             </div>
-        </div>
-
+        </section>
+        <!--Carrusel-->
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -79,6 +79,7 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
+                <!--lamima uno-->
                 <div class="carousel-item active">
                     <img src="./assets/car3.png" />
                     <div class="carousel-caption d-none d-md-block">
@@ -91,6 +92,7 @@
                         </div>
                     </div>
                 </div>
+                <!--lamina dos-->
                 <div class="carousel-item">
                     <img src="./assets/car2.png" />
                     <div class="carousel-caption d-none d-md-block">
@@ -104,6 +106,7 @@
                         </div>
                     </div>
                 </div>
+                <!--lamina tres-->
                 <div class="carousel-item">
                     <img src="./assets/car1.png" />
                     <div class="carousel-caption d-none d-md-block">
@@ -132,16 +135,19 @@
         </div>
         </div>
     </main>
-    <!--Footer-->
-    <footer class="container-fluid footer">
+    <!--Redes sociales-->
+    <footer class="footer container-fluid">
         <div class="row">
-            <div class="col-12 footer__iconos">
-                <img class="footer__redes" src="../assets/whatsapp.png" alt="whatsapp">
-                <img class="footer__redes" src="../assets/instagram.png" alt="instagram">
-                <img class="footer__redes" src="../assets/facebook.png" alt="facebook">
+            <div class="col-12 d-flex flex-row align-items-center justify-content-evenly">
+                <a href="https://www.whatsapp.com/" target="_blank"><img class="footer__redes"
+                        src="../assets/whatsapp.png" alt="logo de whatsapp"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img class="footer__redes"
+                        src="../assets/instagram.png" alt="logo de instagram"></a>
+                <a href="https://es-la.facebook.com/" target="_blank"><img class="footer__redes"
+                        src="../assets/facebook.png" alt="logo de facebook"></a>
             </div>
         </div>
-        <div class="footer__pie">
+        <div class="footer__pie d-flex align-items-end justify-content-center">
             <p>CEO - Almagro 135, Catamarca Argentina / ceocatamarca@gmail.xxx</p>
         </div>
     </footer>
@@ -149,7 +155,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
-
+<script src="./script/script.js"></script>
 </body>
 
 </html>

@@ -16,17 +16,16 @@
   <link rel="stylesheet" href="../scss/main.css">
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Allura&family=Gentium+Basic:wght@400;700&display=swap');
-  </style>
-
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;500;600&display=swap');
+    </style>
 </head>
 
 <body>
-  <!--Header-->
+  <!--Barra de Navegacion-->
   <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-md bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../assets/Logo-CEO-header.png"
+        <a class="navbar-brand" href="../index.html"><img src="../assets/Logo-CEO-header.png"
             alt="Logo de Centro de Especialidades Odontológicas"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,9 +33,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href=#>Proyecto</a>
             </li>
@@ -55,21 +51,21 @@
       </div>
     </nav>
   </header>
-  <!--Main-->
+  <!--Titulo de la Página-->
   <main class="bg-color">
-    <div>
+    <section>
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-            <h1 class="headproyecto">PROYECTO</h1>
+            <h1 class="headproyecto col-12 d-flex justify-content-center">PROYECTO</h1>
           </div>
-
+          <!--Cards-->
           <div class="cards row row-cols-1 row-cols-md-4 g-4 ">
             <div class="col">
               <div class="cards__all h-100">
-                <img src="../assets/c1.jpg" class="card-img-top" alt="Imagen del Consultorio numero 1">
+                <img src="../assets/c2.jpg" class="card-img-top" alt="Imagen del Consultorio numero 1">
                 <div class="cards__body">
-                  <h5 class="cards__title">Consultorio 1</h5>
+                  <h5 class="cards__title">Profesionalidad</h5>
                   <p class="cards__text">Somos un grupo de profesionales que desea poner a su disposición la más alta
                     tecnología
                     en equipos, instrumental, bioseguridad y materiales de última generación para garantizar su
@@ -79,9 +75,9 @@
             </div>
             <div class="col">
               <div class="cards__all h-100">
-                <img src="../assets/c2.jpg" class="card-img-top" alt="Imagen del Consultorio numero 2">
+                <img src="../assets/c1.jpg" class="card-img-top" alt="Imagen del Consultorio numero 2">
                 <div class="cards__body">
-                  <h5 class="cards__title">Consultorio 2</h5>
+                  <h5 class="cards__title">Tecnología</h5>
                   <p class="cards__text">Contamos con la tecnología y profesionales capacitados
                     Brindamos tratamientos y atención personalizada.</p>
                 </div>
@@ -91,7 +87,7 @@
               <div class="cards__all h-100">
                 <img src="../assets/c3.jpg" class="card-img-top" alt="Imagen del Consultorio numero 3">
                 <div class="cards__body">
-                  <h5 class="cards__title">Consultorio 3</h5>
+                  <h5 class="cards__title">Vangiardia</h5>
                   <p class="cards__text">Nos capacitamos continuamente para estar a la vanguardia de los avances de la
                     odontología.</p>
                 </div>
@@ -101,7 +97,7 @@
               <div class="cards__all h-100">
                 <img src="../assets/c4.jpg" class="card-img-top" alt="Imagen del Consultorio numero 4">
                 <div class="cards__body">
-                  <h5 class="cards__title">Consultorio 4</h5>
+                  <h5 class="cards__title">Calidad</h5>
                   <p class="cards__text">Estamos comprometidos en alcanzar y mantener la máxima calidad posible en
                     nuestros
                     servicios.</p>
@@ -111,21 +107,21 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     </div>
 
   </main>
-  <!--Footer-->
-  <footer class="container-fluid footer">
+  <!--Redes sociales-->
+  <footer class="footer container-fluid">
     <div class="row">
-      <div class="col-12 footer__iconos">
-        <img class="footer__redes" src="../assets/whatsapp.png" alt="icono de whatsapp">
-        <img class="footer__redes" src="../assets/instagram.png" alt="icono de instagram">
-        <img class="footer__redes" src="../assets/facebook.png" alt="icono de facebook">
+      <div class="col-12 d-flex flex-row align-items-center justify-content-evenly">
+        <a href="https://www.whatsapp.com/" target="_blank"><img class="footer__redes" src="../assets/whatsapp.png" alt="logo de whatsapp"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img class="footer__redes" src="../assets/instagram.png" alt="logo de instagram"></a>
+        <a href="https://es-la.facebook.com/" target="_blank"><img class="footer__redes" src="../assets/facebook.png" alt="logo de facebook"></a>
       </div>
+      <div class="footer__pie d-flex align-items-end justify-content-center ">
+        <p>CEO - Almagro 135, Catamarca Argentina / ceocatamarca@gmail.xxx</p>
     </div>
-    <div class="footer__pie">
-      <p>CEO - Almagro 135, Catamarca Argentina / ceocatamarca@gmail.xxx</p>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
