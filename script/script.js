@@ -89,11 +89,11 @@ const nombre = document.getElementById('nameInput');
 const tel = document.getElementById('telInput');
 const doctor = document.getElementById('drSelect');
 
-class turno {
+class turno{
   constructor(nombre, tel, doctor) {
-    (this.nombre = nombre),
-    (this.tel = tel),
-      (this.doctor = doctor)
+    this.nombre = nombre;
+    this.tel = tel;
+    this.doctor = doctor;
   }
 }
 
