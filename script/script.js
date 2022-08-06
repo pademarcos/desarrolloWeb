@@ -83,16 +83,14 @@ Teléfono: 383 - 4453272
 Correo electrónico: centrodeesteticayodontologia@gmail.com `;  */
 // he intentado hacerlo con document.getElementsByClassName pero no me sale no se porque.
 //opcion1 eventos
-const turnos =[];
+const turnos = JSON.parse(localStorage.getItem('turnos')) || [];
 const enviar = document.getElementById('btnEnviar');
 const nombre = document.getElementById('nameInput');
 const tel = document.getElementById('telInput');
 const doctor = document.getElementById('drSelect');
 
 enviar.addEventListener('click',()=>{
-  localStorage.setItem('nombreUsuario',nombre.value);
-  localStorage.setItem('telUsuario',tel.value);
-  localStorage.setItem('doctorID',doctor.value);
+  agregarTurno();
 })
 
 class turno{
@@ -104,28 +102,24 @@ class turno{
 }
 
 function agregarTurno(){
-  turnos.push(new turno(('nombreUsuario'.value), ('telUsuario'.value), ('doctorID'.value)));
-  localStorage.setItem('turno', JSON.stringify(nombre));
+  const nuevoTurno = new turno(nombre.value, tel.value, doctor.value)
+  turnos.push(nuevoTurno);
+  localStorage.setItem('turnos', JSON.stringify(turnos));
 }
+
 const mostrarTurnos = () => {
-  for (let i = 0; i < turnos.length; i++) {
+  if (turnos.length) {
+     for (let i = 0; i < turnos.length; i++) {
     alert(
       `        Nombre: ${turnos[i].nombre}
         Telefono: ${turnos[i].tel} 
-        Doctor: ${turnos[i].doctor}
+        Doctor/a: ${turnos[i].doctor}
         `
     );
-  }}
-agregarTurno();
-for (let i=0;i<localStorage.length;i++){
-  let dato = localStorage.key(i);
-  let valor = localStorage.getItem(dato);
-  console.log('Dato: '+dato);
-  console.log('Valor: '+valor);
+  }
+  }
+ 
 }
 
-mostrarTurnos();
-console.log(turnos);
-//opcion2 eventos 
-//btnEnviar.onclick = agregarTurno;
 
+mostrarTurnos();
