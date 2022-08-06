@@ -89,6 +89,12 @@ const nombre = document.getElementById('nameInput');
 const tel = document.getElementById('telInput');
 const doctor = document.getElementById('drSelect');
 
+enviar.addEventListener('click',()=>{
+  localStorage.setItem('nombreUsuario',nombre.value);
+  localStorage.setItem('telUsuario',tel.value);
+  localStorage.setItem('doctorID',doctor.value);
+})
+
 class turno{
   constructor(nombre, tel, doctor) {
     this.nombre = nombre;
@@ -98,15 +104,27 @@ class turno{
 }
 
 function agregarTurno(){
-  
-  turnos.push(new turno(getItem(inputNombre.value), getItem(inputTel.value), getItem(drSelect.value)));
-  
-  enviar.addEventListener('click',agregarTurno);
-  //aqui va el json
-alert('buen dia!');
+  turnos.push(new turno(('nombreUsuario'.value), ('telUsuario'.value), ('doctorID'.value)));
+  localStorage.setItem('turno', JSON.stringify(nombre));
+}
+const mostrarTurnos = () => {
+  for (let i = 0; i < turnos.length; i++) {
+    alert(
+      `        Nombre: ${turnos[i].nombre}
+        Telefono: ${turnos[i].tel} 
+        Doctor: ${turnos[i].doctor}
+        `
+    );
+  }}
+agregarTurno();
+for (let i=0;i<localStorage.length;i++){
+  let dato = localStorage.key(i);
+  let valor = localStorage.getItem(dato);
+  console.log('Dato: '+dato);
+  console.log('Valor: '+valor);
 }
 
-agregarTurno();
+mostrarTurnos();
 console.log(turnos);
 //opcion2 eventos 
 //btnEnviar.onclick = agregarTurno;
