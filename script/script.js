@@ -98,6 +98,12 @@ function agregarTurno(){
 const mostrarTurnos = () => {
   if (turnos.length) {
      for (let i = 0; i < turnos.length; i++) {
+      Toastify({
+        text:`        Nombre: ${turnos[i].nombre}
+        Telefono: ${turnos[i].tel} 
+        Doctor/a: ${turnos[i].doctor}
+        `
+      }).showToast();
       swal.fire(
         {
           title:'Ficha del Paciente',
