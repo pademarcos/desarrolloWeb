@@ -68,21 +68,9 @@ lista();
 
 let parrafoFooter = document.querySelector('#Parrafo');
 parrafoFooter.innerText = 'CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272';
-//lo hice en index y contacto
 
 
-/* let parrafoContacto = document.getElementsByClassName('textoContacto');
-parrafoContacto.innerText = `Somos un equipo de profesionales altamente capacitados con una formación continua en los avances de la
-odontología moderna para brindarles trabajos estéticos odontológicos de excelencia.
-Dónde encontrarnos: 
-Almagro 135 
-San Fdo. del Valle de Catamarca
-Escribinos o llamanos: 
-Whatsapp: 3834008551 
-Teléfono: 383 - 4453272 
-Correo electrónico: centrodeesteticayodontologia@gmail.com `;  */
-// he intentado hacerlo con document.getElementsByClassName pero no me sale no se porque.
-//opcion1 eventos
+
 const turnos = JSON.parse(localStorage.getItem('turnos')) || [];
 const enviar = document.getElementById('btnEnviar');
 const nombre = document.getElementById('nameInput');
@@ -110,6 +98,12 @@ function agregarTurno(){
 const mostrarTurnos = () => {
   if (turnos.length) {
      for (let i = 0; i < turnos.length; i++) {
+      swal.fire(
+        {
+          title:'Ficha del Paciente',
+          icon:'info',
+        }
+      )
     alert(
       `        Nombre: ${turnos[i].nombre}
         Telefono: ${turnos[i].tel} 
