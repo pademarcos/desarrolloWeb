@@ -66,15 +66,54 @@ lista();
  */
 //Desafio complementario: 'Interactuar con HTML'
 
+
+
+
+
 let parrafoFooter = document.querySelector('#Parrafo');
 parrafoFooter.innerText = 'CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272';
+ 
+const usuario = [{nombre:'xxx',email:'xxx@xxx.com',pass:'xxx'}]; 
+const mailLogin = document.getElementById('emailLogin');
+const passLogin = document.getElementById('passwordLogin');
+const recordar = document.getElementById('recordarme');
+function guardarDatos(admin, storage) {
 
+  const usuario = {
+      'name': admin.nombre,
+      'user': admin.mail,
+      'pass': admin.pass
+  }
 
+  storage.setItem('usuario', JSON.stringify(usuario));
+}
+function borrarDatos() {
+  localStorage.clear();
+  sessionStorage.clear();
+}
+function recuperarUsuario(storage) {
+  return JSON.parse(storage.getItem('usuario'));
+}
+function validarUsuario(usuarios, user, pass) {
+  let encontrado = usuarios.find((usuario) => usuario.email == user);
+
+  if (typeof encontrado === 'undefined') {
+      return false;
+  } else {
+      
+      if (encontrado.pass != pass) {
+          return false;
+      } else {
+          return encontrado;
+      }
+  }
+}
 
 const turnos = JSON.parse(localStorage.getItem('turnos')) || [];
 const enviar = document.getElementById('btnEnviar');
 const nombre = document.getElementById('nameInput');
 const tel = document.getElementById('telInput');
+const comentario = document.getElementById('txtComent')
 const doctor = document.getElementById('drSelect');
 
 enviar.addEventListener('click',()=>{
@@ -82,15 +121,16 @@ enviar.addEventListener('click',()=>{
 })
 
 class turno{
-  constructor(nombre, tel, doctor) {
+  constructor(nombre, tel, doctor, comentario) {
     this.nombre = nombre;
     this.tel = tel;
     this.doctor = doctor;
+    this.comentario = comentario;
   }
 }
 
 function agregarTurno(){
-  const nuevoTurno = new turno(nombre.value, tel.value, doctor.value)
+  const nuevoTurno = new turno(nombre.value, tel.value, doctor.value, comentario.value)
   turnos.push(nuevoTurno);
   localStorage.setItem('turnos', JSON.stringify(turnos));
 }
@@ -98,22 +138,24 @@ function agregarTurno(){
 const mostrarTurnos = () => {
   if (turnos.length) {
      for (let i = 0; i < turnos.length; i++) {
-      Toastify({
+      /* Toastify({
         text:`        Nombre: ${turnos[i].nombre}
         Telefono: ${turnos[i].tel} 
         Doctor/a: ${turnos[i].doctor}
+        Comentario: ${turnos[i].comentario}
         `
-      }).showToast();
-      swal.fire(
+      }).showToast(); */
+     /*  swal.fire(
         {
           title:'Ficha del Paciente',
           icon:'info',
         }
-      )
+      ) */
     alert(
       `        Nombre: ${turnos[i].nombre}
         Telefono: ${turnos[i].tel} 
         Doctor/a: ${turnos[i].doctor}
+        Comentario: ${turnos[i].comentario}
         `
     );
   }

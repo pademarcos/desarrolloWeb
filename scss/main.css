@@ -113,6 +113,10 @@
   font-size: 1.2rem;
   font-family: "Red Hat Display", sans-serif;
 }
+.textarea{
+  height: 20vh;
+  width: 70%;
+}
 
 .mapa {
   padding: 20px;

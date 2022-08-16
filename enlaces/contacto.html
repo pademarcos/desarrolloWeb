@@ -101,16 +101,22 @@
                   <option value="Dra. Estrella">Dra. Estrella</option>
                 </select>
               </div>
-              <div class="col-auto">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-                  <label class="form-check-label" for="autoSizingCheck">
-                    Recordar
-                  </label>
-                </div>
-              </div>
+              
               <div class="col-auto">
                 <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
+                <form class="d-flex">
+                  
+                  <button id="btnModalLogin" class="btn btn-outline-primary me-2 toggles" type="button" data-bs-toggle="modal"
+                      data-bs-target="#modalLogin">Login</button>
+                  <button id="btnLogout" class="btn btn-outline-secondary d-none toggles" type="button">Logout</button>
+                  <p id="nombreUsuario" class="d-none toggles">Administrador: </p>
+
+              </form>
+                
+              </div>
+              <div class="textarea input-group">
+                <span class="input-group-text" id="txtComent">Comentario</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
               </div>
             </form>
           </div>
