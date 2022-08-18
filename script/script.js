@@ -1,75 +1,8 @@
-/* const pacientes = [
-  { nombre: "Pablo", apellido: "de Marcos", edad: "39", tel: "3834008551" },
-];
-
-class paciente {
-  constructor(nombre, apellido, edad, tel) {
-    (this.nombre = nombre),
-      (this.apellido = apellido),
-      (this.edad = edad),
-      (this.tel = tel);
-  }
-}
-function ingresarPaciente() {
-  let nuevoNombre = prompt("Ingrese el Nombre del nuevo paciente: ");
-  let nuevoApellido = prompt("Ingrese el Apellido del nuevo paciente: ");
-  let nuevaEdad = prompt("Ingrese la Edad del nuevo paciente: ");
-  let nuevoTel = prompt("Ingrese el telefono del paciente a registrar: ");
-  pacientes.push(new paciente(nuevoNombre, nuevoApellido, nuevaEdad, nuevoTel));
-}
-const mostrarPacientes = () => {
-  for (let i = 0; i < pacientes.length; i++) {
-    alert(
-      `        Apellido: ${pacientes[i].apellido}
-        Nombre:   ${pacientes[i].nombre}
-        Edad:     ${pacientes[i].edad}
-        Telefono: ${pacientes[i].tel} 
-        `
-    );
-    console.log(
-      "Nombre: " +
-        pacientes[i].nombre +
-        "\n" +
-        "Apellido: " +
-        pacientes[i].apellido +
-        "\n" +
-        "Edad: " +
-        pacientes[i].edad +
-        "\n" +
-        "Telefono: " +
-        pacientes[i].tel
-    );
-  }
-};
-function lista() {
-  let opcion = prompt(
-    "Agenda pacientes CEO: \n1 Lista de Pacientes \n2 Nuevo Paciente \n3 Salir"
-  );
-  if (opcion != "3") {
-    switch (opcion) {
-      case "1":
-        mostrarPacientes();
-        break;
-      case "2":
-        ingresarPaciente();
-        mostrarPacientes();
-        break;
-      default:
-        break;
-    }
-    lista();
-  } else {
-    alert("Gracias!");
-  }
-}
-lista();
- */
-//Desafio complementario: 'Interactuar con HTML'
 
 
 let parrafoFooter = document.querySelector('#Parrafo');
 parrafoFooter.innerText = 'CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272';
- 
+
 const usuario = [{nombre:'pablo',mail:'x',pass:'x'}]; 
 const mailLogin = document.getElementById('emailLogin');
 const passLogin = document.getElementById('passwordLogin');
@@ -80,10 +13,16 @@ const rowPaciente = document.getElementById('rowPaciente');
 const modalEl = document.getElementById('modalLogin');
 const modal = new bootstrap.Modal(modalEl);
 const toggles = document.querySelectorAll('.toggles'); 
- 
+const turnos = JSON.parse(localStorage.getItem('turnos')) || [];
+const enviar = document.getElementById('btnEnviar');
+const nombre = document.getElementById('nameInput');
+const tel = document.getElementById('telInput');
+const comentario = document.getElementById('txtComent')
+const doctor = document.getElementById('drSelect');
+
 function guardarDatos(admin, storage) {
   const usuario = {
-      'name': admin.nombre,
+    'name': admin.nombre,
       'user': admin.email,
       'pass': admin.pass
   }
@@ -144,6 +83,7 @@ function cargarPaciente(paciente) {
 
 btnLogout.addEventListener('click', () => {
   borrarDatos();
+  window.location.href='../index.html';
   intercambiarClases(toggles, 'd-none');
 });
 
@@ -180,12 +120,6 @@ btnLogin.addEventListener('click', (e) => {
   }
 })
 
-const turnos = JSON.parse(localStorage.getItem('turnos')) || [];
-const enviar = document.getElementById('btnEnviar');
-const nombre = document.getElementById('nameInput');
-const tel = document.getElementById('telInput');
-const comentario = document.getElementById('txtComent')
-const doctor = document.getElementById('drSelect');
 
 enviar.addEventListener('click',()=>{
   agregarTurno();
