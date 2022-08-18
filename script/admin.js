@@ -134,26 +134,7 @@ estaLogueado(recuperarUsuario(localStorage));
 const mostrarTurnos = () => {
   if (turnos.length) {
     for (let i = 0; i < turnos.length; i++) {
-      /*  Toastify({
-          text:`        Nombre: ${turnos[i].nombre}
-          Telefono: ${turnos[i].tel} 
-          Doctor/a: ${turnos[i].doctor}
-          Comentario: ${turnos[i].comentario}
-          `
-        }).showToast(); */
-      /* swal.fire(
-          {
-            title:'Ficha del Paciente',
-            icon:'info',
-          }
-          ) */
-      /*  alert(
-            `        Nombre: ${turnos[i].nombre}
-            Telefono: ${turnos[i].tel} 
-            Doctor/a: ${turnos[i].doctor}
-            Comentario: ${turnos[i].comentario}
-            `
-            ); */
+     
     }
   }
 };

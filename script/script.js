@@ -27,6 +27,7 @@ function guardarDatos(admin, storage) {
       'pass': admin.pass
   }
   storage.setItem('usuario', JSON.stringify(usuario));
+  
 }
 //revisar
 function intercambiarClases(array, clase) {
@@ -71,7 +72,7 @@ function saludar(usuario) {
   nombreUsuario.innerHTML = `Bienvenido/a, <span>${usuario.name}</span>`
 }
 
-function cargarPaciente(paciente) {
+/* function cargarPaciente(paciente) {
   rowPaciente.innerHTML = `
   <th scope="row">1</th>
   <td>${paciente.nombre}</td>
@@ -79,7 +80,7 @@ function cargarPaciente(paciente) {
   <td>${paciente.email}</td>
   <td>${paciente.comentario}</td>
   `
-}
+} */
 
 btnLogout.addEventListener('click', () => {
   borrarDatos();
@@ -117,16 +118,16 @@ btnLogin.addEventListener('click', (e) => {
         guardarDatos(data, localStorage);
         saludar(recuperarUsuario(localStorage));
         window.location.href='../enlaces/admin.html';
-        turnos.forEach(paciente => {
+        /* turnos.forEach(paciente => {
           cargarPaciente(paciente);
-        });
+        }); */
       } else {
-        guardarDatos(data, sessionStorage);
-        saludar(recuperarUsuario(sessionStorage));
+        guardarDatos(data, localStorage);
+        saludar(recuperarUsuario(localStorage));
         window.location.href='../enlaces/admin.html';
-        turnos.forEach(paciente => {
+        /* turnos.forEach(paciente => {
           cargarPaciente(paciente);
-        });
+        }); */
       }
       modal.hide();
       intercambiarClases(toggles, 'd-none');
@@ -136,6 +137,11 @@ btnLogin.addEventListener('click', (e) => {
 
 
 enviar.addEventListener('click',()=>{
+ /*  swal.fire({
+    title: "CEO",
+    text: "Su mensaje ha sido enviado, pronto nos comunicaremos con Ud.",
+    icon: "success",
+  }); */
   agregarTurno();
   location.reload();
 })
