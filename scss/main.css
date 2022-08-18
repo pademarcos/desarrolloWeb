@@ -115,7 +115,8 @@
 }
 .textarea{
   height: 20vh;
-  width: 70%;
+  width: 65%;
+  margin-top: 10px;
 }
 
 .mapa {
