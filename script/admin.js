@@ -76,6 +76,7 @@ function cargarPaciente() {
     <th scope="row">${i + 1}</th>
     <td>${turno.nombre}</td>
     <td>${turno.tel}</td>
+    <td>${turno.doctor}</td>
     <td>${turno.comentario}</td>
     <td><button id="${i}" class="borrarBtn"> eliminar </button></td>
     </tr>
