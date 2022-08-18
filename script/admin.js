@@ -18,6 +18,7 @@ const nombre = document.getElementById("nameInput");
 const tel = document.getElementById("telInput");
 const comentario = document.getElementById("txtComent");
 const doctor = document.getElementById("drSelect");
+let borrarBtn = null;
 
 function recuperarUsuario(storage) {
   return JSON.parse(storage.getItem("usuario"));
@@ -49,9 +50,9 @@ function validarUsuario(admin, user, pass) {
 function estaLogueado(usuario) {
   if (usuario) {
     saludar(usuario);
-    
-      cargarPaciente();
-    
+
+    cargarPaciente();
+
     intercambiarClases(toggles, "d-none");
   }
 }
@@ -63,24 +64,38 @@ function intercambiarClases(array, clase) {
     element.classList.toggle(clase);
   });
 }
+function eliminarTurno(indexTurno) {
+  turnos.splice(indexTurno, 1);
+  localStorage.setItem("turnos", JSON.stringify(turnos));
+  location.reload();
+}
 function cargarPaciente() {
-  
   turnos.forEach((turno, i) => {
-    tablaPaciente.innerHTML +=
-    `
+    tablaPaciente.innerHTML += `
     <tr>
     <th scope="row">${i + 1}</th>
     <td>${turno.nombre}</td>
     <td>${turno.tel}</td>
     <td>${turno.comentario}</td>
+    <td><button id="${i}" class="borrarBtn"> eliminar </button></td>
     </tr>
-    `
+    `;
   });
+
+  if (turnos.length) {
+    listaBorrarBtn = document.querySelectorAll(".borrarBtn");
+    listaBorrarBtn.forEach((borrarBtn) => {
+      borrarBtn.addEventListener("click", (e) => {
+        console.log(e.srcElement.id);
+        eliminarTurno(e.srcElement.id);
+      });
+    });
+  }
 }
+
 
 function borrarDatos() {
   localStorage.removeItem("usuario");
-  sessionStorage.clear();
 }
 btnLogout.addEventListener("click", () => {
   borrarDatos();
@@ -98,7 +113,7 @@ btnLogin.addEventListener("click", (e) => {
     });
   } else {
     let data = validarUsuario(usuario, mailLogin.value, passLogin.value);
-    
+
     if (!data) {
       swal.fire({
         title: "Error",
@@ -108,9 +123,7 @@ btnLogin.addEventListener("click", (e) => {
     } else {
       guardarDatos(data, localStorage);
       saludar(recuperarUsuario(localStorage));
-      
       cargarPaciente();
-      
       location.reload();
       modal.hide();
       intercambiarClases(toggles, "d-none");
@@ -128,21 +141,19 @@ const mostrarTurnos = () => {
           Comentario: ${turnos[i].comentario}
           `
         }).showToast(); */
-        /* swal.fire(
+      /* swal.fire(
           {
             title:'Ficha del Paciente',
             icon:'info',
           }
           ) */
-          /*  alert(
+      /*  alert(
             `        Nombre: ${turnos[i].nombre}
             Telefono: ${turnos[i].tel} 
             Doctor/a: ${turnos[i].doctor}
             Comentario: ${turnos[i].comentario}
             `
             ); */
-          }
-        }
-      };
-      
-      
+    }
+  }
+};
