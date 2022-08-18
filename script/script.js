@@ -90,13 +90,27 @@ btnLogout.addEventListener('click', () => {
 btnLogin.addEventListener('click', (e) => {
   e.preventDefault();
   if (!mailLogin.value || !passLogin.value) {
-    alert('Todos los campos son requeridos');
+    swal.fire(
+      {
+        title:'Atención!',
+        text:'Todos los datos son requeridos',
+        icon:'info',
+      }
+      );
+    
     
   } else {
     let data = validarUsuario(usuario, mailLogin.value, passLogin.value);
     
     if (!data) {
-      alert(`Usuario y/o contraseña erróneos`);
+      swal.fire(
+        {
+          title:'Error',
+          text:'Usuario y/o contraseña erróneos',
+          icon:'error',
+        }
+        );
+      
     } else {
       
       if (recordar.checked) {
@@ -123,6 +137,7 @@ btnLogin.addEventListener('click', (e) => {
 
 enviar.addEventListener('click',()=>{
   agregarTurno();
+  location.reload();
 })
 
 class turno{
@@ -138,31 +153,32 @@ function agregarTurno(){
   const nuevoTurno = new turno(nombre.value, tel.value, doctor.value, comentario.value)
   turnos.push(nuevoTurno);
   localStorage.setItem('turnos', JSON.stringify(turnos));
+  
 }
 
 const mostrarTurnos = () => {
   if (turnos.length) {
     for (let i = 0; i < turnos.length; i++) {
-      /* Toastify({
+      Toastify({
         text:`        Nombre: ${turnos[i].nombre}
         Telefono: ${turnos[i].tel} 
         Doctor/a: ${turnos[i].doctor}
         Comentario: ${turnos[i].comentario}
         `
-      }).showToast(); */
+      }).showToast();
       /* swal.fire(
         {
           title:'Ficha del Paciente',
           icon:'info',
         }
         ) */
-        alert(
+       /*  alert(
           `        Nombre: ${turnos[i].nombre}
           Telefono: ${turnos[i].tel} 
           Doctor/a: ${turnos[i].doctor}
           Comentario: ${turnos[i].comentario}
           `
-          );
+          ); */
         }
       }
     }
