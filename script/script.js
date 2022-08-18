@@ -136,6 +136,13 @@ btnLogin.addEventListener('click', (e) => {
 })
 
 
+function agregarTurno(){
+  const nuevoTurno = new turno(nombre.value, tel.value, doctor.value, comentario.value)
+  turnos.push(nuevoTurno);
+  localStorage.setItem('turnos', JSON.stringify(turnos));
+  
+}
+
 enviar.addEventListener('click',()=>{
  /*  swal.fire({
     title: "CEO",
@@ -155,23 +162,16 @@ class turno{
   }
 }
 
-function agregarTurno(){
-  const nuevoTurno = new turno(nombre.value, tel.value, doctor.value, comentario.value)
-  turnos.push(nuevoTurno);
-  localStorage.setItem('turnos', JSON.stringify(turnos));
-  
-}
-
 const mostrarTurnos = () => {
   if (turnos.length) {
     for (let i = 0; i < turnos.length; i++) {
-      Toastify({
+      /* Toastify({
         text:`        Nombre: ${turnos[i].nombre}
         Telefono: ${turnos[i].tel} 
         Doctor/a: ${turnos[i].doctor}
         Comentario: ${turnos[i].comentario}
         `
-      }).showToast();
+      }).showToast(); */
       /* swal.fire(
         {
           title:'Ficha del Paciente',
