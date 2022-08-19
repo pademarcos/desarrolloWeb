@@ -144,13 +144,15 @@ function agregarTurno(){
 }
 
 enviar.addEventListener('click',()=>{
- /*  swal.fire({
+  agregarTurno();
+  swal.fire({
     title: "CEO",
     text: "Su mensaje ha sido enviado, pronto nos comunicaremos con Ud.",
     icon: "success",
-  }); */
-  agregarTurno();
+  }).then(()=>{
   location.reload();
+  });
+  
 })
 
 class turno{
