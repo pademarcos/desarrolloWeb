@@ -113,8 +113,14 @@
   font-size: 1.2rem;
   font-family: "Red Hat Display", sans-serif;
 }
-.textarea{
+
+.textarea {
   height: 20vh;
+  width: 65%;
+  margin-top: 10px;
+}
+
+.mailtext {
   width: 65%;
   margin-top: 10px;
 }
@@ -136,4 +142,8 @@
 }
 .footer__pie {
   font-size: 1.2rem;
+}
+
+.nameUsuario {
+  text-transform: capitalize;
 }/*# sourceMappingURL=main.css.map */

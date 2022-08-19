@@ -118,6 +118,16 @@
        
     }
 }
+.textarea{
+    height: 20vh;
+    width: 65%;
+    margin-top: 10px;
+  }
+.mailtext{
+    
+    width: 65%;
+    margin-top: 10px;
+}
 .mapa{
     padding: 20px;
     
@@ -140,3 +150,6 @@
         font-size: 1.2rem;
     }
 }
+.nameUsuario{
+    text-transform: capitalize;
+  }

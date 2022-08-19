@@ -1,7 +1,4 @@
-let parrafoFooter = document.querySelector("#Parrafo");
-parrafoFooter.innerText =
-  "CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272";
-
+const parrafoFooter = document.querySelector("#Parrafo");
 const usuario = [{ nombre: "pablo", mail: "x", pass: "x" }];
 const mailLogin = document.getElementById("emailLogin");
 const passLogin = document.getElementById("passwordLogin");
@@ -18,19 +15,25 @@ const nombre = document.getElementById("nameInput");
 const tel = document.getElementById("telInput");
 const comentario = document.getElementById("txtComent");
 const doctor = document.getElementById("drSelect");
+const turnoMail = document.getElementById("turnoMail");
 let borrarBtn = null;
+parrafoFooter.innerText =
+"CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272";
 
-function recuperarUsuario(storage) {
-  return JSON.parse(storage.getItem("usuario"));
+function recuperarUsuario() {
+  let usuario = JSON.parse(localStorage.getItem("usuario"));
+  if (!usuario) {
+    usuario = JSON.parse(sessionStorage.getItem("usuario"));
+  }
+  return usuario
 }
-function guardarDatos(admin, storage) {
-  const usuario = {
-    name: admin.nombre,
-    user: admin.email,
-    pass: admin.pass,
-  };
 
-  storage.setItem("usuario", JSON.stringify(usuario));
+function guardarDatos(usuario, persistir) {
+  if (persistir) {
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+  } else {
+    sessionStorage.setItem("usuario", JSON.stringify(usuario));
+  }
 }
 
 function validarUsuario(admin, user, pass) {
@@ -50,25 +53,31 @@ function validarUsuario(admin, user, pass) {
 function estaLogueado(usuario) {
   if (usuario) {
     saludar(usuario);
-
     cargarPaciente();
-
     intercambiarClases(toggles, "d-none");
   }
 }
+
 function saludar(usuario) {
-  nombreUsuario.innerHTML = `Bienvenido/a, <span>${usuario.name}</span>`;
+  if (usuario) {
+    nombreUsuario.innerHTML = `Bienvenido/a: <span class="nameUsuario">${usuario.nombre}</span>`;
+  } else {
+    nombreUsuario.innerHTML = "";
+  }
 }
+
 function intercambiarClases(array, clase) {
   array.forEach((element) => {
     element.classList.toggle(clase);
   });
 }
+
 function eliminarTurno(indexTurno) {
   turnos.splice(indexTurno, 1);
   localStorage.setItem("turnos", JSON.stringify(turnos));
   location.reload();
 }
+
 function cargarPaciente() {
   turnos.forEach((turno, i) => {
     tablaPaciente.innerHTML += `
@@ -77,8 +86,9 @@ function cargarPaciente() {
     <td>${turno.nombre}</td>
     <td>${turno.tel}</td>
     <td>${turno.doctor}</td>
+    <td>${turno.mail}</td>
     <td>${turno.comentario}</td>
-    <td><button id="${i}" class="borrarBtn"> eliminar </button></td>
+    <td><button id="${i}" type="button" class="borrarBtn btn btn-danger">Eliminar</button></td>
     </tr>
     `;
   });
@@ -94,14 +104,15 @@ function cargarPaciente() {
   }
 }
 
-
 function borrarDatos() {
   localStorage.removeItem("usuario");
+  sessionStorage.removeItem("usuario");
 }
+
 btnLogout.addEventListener("click", () => {
   borrarDatos();
-  window.location.href = "../index.html";
   intercambiarClases(toggles, "d-none");
+  window.location.href = "../index.html";
 });
 
 btnLogin.addEventListener("click", (e) => {
@@ -113,8 +124,7 @@ btnLogin.addEventListener("click", (e) => {
       icon: "info",
     });
   } else {
-    let data = validarUsuario(usuario, mailLogin.value, passLogin.value);
-
+    let data = validarUsuario(usuariosPermitidos, mailLogin.value, passLogin.value);
     if (!data) {
       swal.fire({
         title: "Error",
@@ -122,20 +132,13 @@ btnLogin.addEventListener("click", (e) => {
         icon: "error",
       });
     } else {
-      guardarDatos(data, localStorage);
-      saludar(recuperarUsuario(localStorage));
-      cargarPaciente();
-      location.reload();
+      guardarDatos(data, recordar.checked);
+      saludar(recuperarUsuario());
       modal.hide();
       intercambiarClases(toggles, "d-none");
+      window.location.href = "../enlaces/admin.html";
     }
   }
 });
-estaLogueado(recuperarUsuario(localStorage));
-const mostrarTurnos = () => {
-  if (turnos.length) {
-    for (let i = 0; i < turnos.length; i++) {
-     
-    }
-  }
-};
+
+estaLogueado(recuperarUsuario());
