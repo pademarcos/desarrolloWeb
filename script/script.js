@@ -133,15 +133,37 @@ btnLogin.addEventListener("click", (e) => {
 if (window.location.href.includes("contacto.html")) {
   enviar.addEventListener("click", () => {
     agregarTurno();
-    swal.fire({
-        title: "CEO",
-        text: "Su mensaje ha sido enviado, pronto nos comunicaremos con Ud.",
-        icon: "success",
-      })
-      .then(() => {
+    
+      then(() => {
         location.reload();
       });
   });
 }
 
 estaLogueado(recuperarUsuario());
+
+//EmailJS
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   enviar.value = 'Enviando..';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_fyntten';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      enviar.value = 'Enviar';
+      swal.fire({
+        title: "CEO",
+        text: "El mensaje ha sido enviado correctamente, prontos nos comunicaremos con Ud.",
+        icon: "info",
+      });
+      
+    }, (err) => {
+      enviar.value = 'Enviar';
+      alert(JSON.stringify(err));
+    });
+});

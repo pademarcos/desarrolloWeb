@@ -1,3 +1,4 @@
+
 const parrafoFooter = document.querySelector("#Parrafo");
 const usuario = [{ nombre: "pablo", mail: "x", pass: "x" }];
 const mailLogin = document.getElementById("emailLogin");
@@ -17,6 +18,7 @@ const comentario = document.getElementById("txtComent");
 const doctor = document.getElementById("drSelect");
 const turnoMail = document.getElementById("turnoMail");
 let borrarBtn = null;
+
 parrafoFooter.innerText =
 "CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272";
 
