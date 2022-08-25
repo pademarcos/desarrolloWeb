@@ -130,20 +130,16 @@ btnLogin.addEventListener("click", (e) => {
   }
 });
 
+
+    
+     
+ 
+
+
+//EmailJS
 if (window.location.href.includes("contacto.html")) {
   enviar.addEventListener("click", () => {
     agregarTurno();
-    
-      then(() => {
-        location.reload();
-      });
-  });
-}
-
-estaLogueado(recuperarUsuario());
-
-//EmailJS
-
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
@@ -158,12 +154,19 @@ document.getElementById('form')
       enviar.value = 'Enviar';
       swal.fire({
         title: "CEO",
-        text: "El mensaje ha sido enviado correctamente, prontos nos comunicaremos con Ud.",
+        text: "El mensaje ha sido enviado correctamente, pronto nos comunicaremos con Ud.",
         icon: "info",
       });
-      
     }, (err) => {
       enviar.value = 'Enviar';
       alert(JSON.stringify(err));
     });
 });
+
+ });
+ //aqui no se como hacer para que funcione recargar la web una vez enviado el mail y mostrado el sweetalert.
+then(() => {
+        location.reload();
+      });
+};
+estaLogueado(recuperarUsuario());
