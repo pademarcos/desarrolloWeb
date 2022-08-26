@@ -18,7 +18,7 @@ const doctor = document.getElementById("drSelect");
 const turnoMail = document.getElementById("turnoMail");
 
 parrafoFooter.innerText =
-"CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272";
+  "CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272";
 
 class turno {
   constructor(nombre, tel, doctor, mail, comentario) {
@@ -56,7 +56,7 @@ function recuperarUsuario() {
   if (!usuario) {
     usuario = JSON.parse(sessionStorage.getItem("usuario"));
   }
-  return usuario
+  return usuario;
 }
 
 function validarUsuario(admin, user, pass) {
@@ -113,7 +113,11 @@ btnLogin.addEventListener("click", (e) => {
       icon: "info",
     });
   } else {
-    let data = validarUsuario(usuariosPermitidos, mailLogin.value, passLogin.value);
+    let data = validarUsuario(
+      usuariosPermitidos,
+      mailLogin.value,
+      passLogin.value
+    );
     if (!data) {
       swal.fire({
         title: "Error",
@@ -130,43 +134,41 @@ btnLogin.addEventListener("click", (e) => {
   }
 });
 
-
-    
-     
- 
-
-
 //EmailJS
 if (window.location.href.includes("contacto.html")) {
   enviar.addEventListener("click", () => {
     agregarTurno();
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+    document
+      .getElementById("form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
 
-   enviar.value = 'Enviando..';
+        enviar.value = "Enviando..";
 
-   const serviceID = 'default_service';
-   const templateID = 'template_fyntten';
+        const serviceID = "default_service";
+        const templateID = "template_fyntten";
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      enviar.value = 'Enviar';
-      swal.fire({
-        title: "CEO",
-        text: "El mensaje ha sido enviado correctamente, pronto nos comunicaremos con Ud.",
-        icon: "info",
+        emailjs.sendForm(serviceID, templateID, this).then(
+          () => {
+            enviar.value = "Enviar";
+            swal.fire({
+              title: "CEO",
+              text: "El mensaje ha sido enviado correctamente, pronto nos comunicaremos con Ud.",
+              icon: "info",
+            }).then(() => {
+              location.reload();
+            });
+          },
+          (err) => {
+            enviar.value = "Enviar";
+            alert(JSON.stringify(err));
+          }
+        )
+    
+
       });
-    }, (err) => {
-      enviar.value = 'Enviar';
-      alert(JSON.stringify(err));
-    });
-});
-
- });
- //aqui no se como hacer para que funcione recargar la web una vez enviado el mail y mostrado el sweetalert.
-then(() => {
-        location.reload();
-      });
-};
+  });
+  
+  
+}
 estaLogueado(recuperarUsuario());
