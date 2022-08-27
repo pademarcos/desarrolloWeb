@@ -144,6 +144,10 @@
   font-size: 1.2rem;
 }
 
+#orderBtn {
+  margin: 10px;
+}
+
 .nameUsuario {
   text-transform: capitalize;
 }/*# sourceMappingURL=main.css.map */

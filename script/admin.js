@@ -1,4 +1,3 @@
-
 const parrafoFooter = document.querySelector("#Parrafo");
 const usuario = [{ nombre: "pablo", mail: "x", pass: "x" }];
 const mailLogin = document.getElementById("emailLogin");
@@ -20,14 +19,14 @@ const turnoMail = document.getElementById("turnoMail");
 let borrarBtn = null;
 
 parrafoFooter.innerText =
-"CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272";
+  "CEO - Almagro 135, Catamarca - Argentina / centrodeesteticayodontologia@gmail.com tel:383-4453272";
 
 function recuperarUsuario() {
   let usuario = JSON.parse(localStorage.getItem("usuario"));
   if (!usuario) {
     usuario = JSON.parse(sessionStorage.getItem("usuario"));
   }
-  return usuario
+  return usuario;
 }
 
 function guardarDatos(usuario, persistir) {
@@ -126,7 +125,11 @@ btnLogin.addEventListener("click", (e) => {
       icon: "info",
     });
   } else {
-    let data = validarUsuario(usuariosPermitidos, mailLogin.value, passLogin.value);
+    let data = validarUsuario(
+      usuariosPermitidos,
+      mailLogin.value,
+      passLogin.value
+    );
     if (!data) {
       swal.fire({
         title: "Error",
@@ -144,3 +147,16 @@ btnLogin.addEventListener("click", (e) => {
 });
 
 estaLogueado(recuperarUsuario());
+
+
+
+// ordenar por dr
+let ordenados = turnos.slice(0);
+function ordenar(array) {
+  return array.sort((a,b)=>a+b);
+}
+const orderBtn = document.getElementById("orderBtn");
+orderBtn.addEventListener("click", () => {
+  ordenar(ordenados);
+  console.log(ordenados);
+});
