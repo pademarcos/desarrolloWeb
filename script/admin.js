@@ -9,13 +9,14 @@ const rowPaciente = document.getElementById("rowPaciente");
 const modalEl = document.getElementById("modalLogin");
 const modal = new bootstrap.Modal(modalEl);
 const toggles = document.querySelectorAll(".toggles");
-const turnos = JSON.parse(localStorage.getItem("turnos")) || [];
+let turnos = JSON.parse(localStorage.getItem("turnos")) || [];
 const enviar = document.getElementById("btnEnviar");
 const nombre = document.getElementById("nameInput");
 const tel = document.getElementById("telInput");
 const comentario = document.getElementById("txtComent");
 const doctor = document.getElementById("drSelect");
 const turnoMail = document.getElementById("turnoMail");
+const listaColumna = document.querySelectorAll(".ordenarPor");
 let borrarBtn = null;
 
 parrafoFooter.innerText =
@@ -80,6 +81,7 @@ function eliminarTurno(indexTurno) {
 }
 
 function cargarPaciente() {
+  tablaPaciente.innerHTML = "<div></div>";
   turnos.forEach((turno, i) => {
     tablaPaciente.innerHTML += `
     <tr>
@@ -98,17 +100,36 @@ function cargarPaciente() {
     listaBorrarBtn = document.querySelectorAll(".borrarBtn");
     listaBorrarBtn.forEach((borrarBtn) => {
       borrarBtn.addEventListener("click", (e) => {
-        console.log(e.srcElement.id);
         eliminarTurno(e.srcElement.id);
       });
     });
   }
 }
 
+function ordenar(valor) {
+  let ordenados = turnos.slice(0);
+  return ordenados.sort((o1, o2) => {
+    if (o1[valor] > o2[valor]) {
+      return 1;
+    } else if (o1[valor] < o2[valor]) {
+      return -1;
+    }
+    return 0;
+  });
+}
+
 function borrarDatos() {
   localStorage.removeItem("usuario");
   sessionStorage.removeItem("usuario");
 }
+
+listaColumna.forEach((titulo) => {
+  titulo.addEventListener("click", (e) => {
+    const ordenados = ordenar(e.target.id);
+  turnos = ordenados;
+  cargarPaciente();
+  });
+});
 
 btnLogout.addEventListener("click", () => {
   borrarDatos();
@@ -149,14 +170,3 @@ btnLogin.addEventListener("click", (e) => {
 estaLogueado(recuperarUsuario());
 
 
-
-// ordenar por dr
-let ordenados = turnos.slice(0);
-function ordenar(array) {
-  return array.sort((a,b)=>a+b);
-}
-const orderBtn = document.getElementById("orderBtn");
-orderBtn.addEventListener("click", () => {
-  ordenar(ordenados);
-  console.log(ordenados);
-});

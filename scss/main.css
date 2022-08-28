@@ -148,6 +148,10 @@
   margin: 10px;
 }
 
+.ordenarPor {
+  cursor: pointer;
+}
+
 .nameUsuario {
   text-transform: capitalize;
 }/*# sourceMappingURL=main.css.map */
