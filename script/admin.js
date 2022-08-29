@@ -1,5 +1,5 @@
 const parrafoFooter = document.querySelector("#Parrafo");
-const usuario = [{ nombre: "pablo", mail: "x", pass: "x" }];
+const usuariosPermitidos = [{ nombre: "pablo", mail: "x", pass: "x" }];
 const mailLogin = document.getElementById("emailLogin");
 const passLogin = document.getElementById("passwordLogin");
 const recordar = document.getElementById("recordarme");
@@ -100,7 +100,34 @@ function cargarPaciente() {
     listaBorrarBtn = document.querySelectorAll(".borrarBtn");
     listaBorrarBtn.forEach((borrarBtn) => {
       borrarBtn.addEventListener("click", (e) => {
-        eliminarTurno(e.srcElement.id);
+        const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+          },
+          buttonsStyling: true
+        })
+        swalWithBootstrapButtons.fire({
+          title: 'Estas seguro/a?',
+          text: "Realmente quieres borrar este turno?",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Eliminar',
+          cancelButtonText: 'Cancelar!',
+          reverseButtons: false
+        }).then((result) => {
+          if (result.isConfirmed) {
+            eliminarTurno(e.srcElement.id);
+          } else if (
+            result.dismiss === Swal.DismissReason.cancel
+          ) {
+            swalWithBootstrapButtons.fire(
+              'Cancelado',
+              'El turno esta a salvo!',
+              'error'
+            )
+          }
+        })
       });
     });
   }
