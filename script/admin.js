@@ -85,13 +85,13 @@ function cargarPaciente() {
   turnos.forEach((turno, i) => {
     tablaPaciente.innerHTML += `
     <tr>
-    <th scope="row">${i + 1}</th>
-    <td>${turno.nombre}</td>
-    <td>${turno.tel}</td>
-    <td>${turno.doctor}</td>
-    <td>${turno.mail}</td>
-    <td>${turno.comentario}</td>
-    <td><button id="${i}" type="button" class="borrarBtn btn btn-danger">Eliminar</button></td>
+    <th scope="col">${i + 1}</th>
+    <td scope="col">${turno.nombre}</td>
+    <td scope="col">${turno.tel}</td>
+    <td scope="col">${turno.doctor}</td>
+    <td scope="col">${turno.mail}</td>
+    <td scope="col">${turno.comentario}</td>
+    <td scope="col"><button id="${i}" type="button" class="borrarBtn btn btn-danger">Eliminar</button></td>
     </tr>
     `;
   });
